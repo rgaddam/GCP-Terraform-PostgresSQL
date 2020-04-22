@@ -17,7 +17,7 @@ variable "region" {
 }
 
 variable "instance_name" {
-  default = "gonzotest"
+  default = "cloudsql-test"
 }
 
 variable "project" {
@@ -66,7 +66,7 @@ variable "backup_start_time" {
 
 # database settings
 variable db_name {
-  default = "gonzo-test"
+  default = "cloudslq-test"
 }
 variable db_charset {
   description = "The charset for the default database"
@@ -80,7 +80,7 @@ variable db_collation {
 
 # user settings
 variable db_user_name {
-  default = "gonzo"
+  default = "cloudsql"
 }
 
 variable db_user_host {
