@@ -1,12 +1,14 @@
 # GCP Authentication 
 # define the GCP authentication file
 variable "gcp_auth_file" {
-  type = string
+  type        = string
   description = "GCP authentication file"
 }
 # 
 
-
+variable "na_network_ref_id" {
+  default = "projects/cloud-sql-275018/global/networks/default"
+}
 # database instance settings
 variable "zone" {
   default = "us-central1-f"
@@ -17,7 +19,7 @@ variable "region" {
 }
 
 variable "instance_name" {
-  default = "cloudsql-test"
+  default = "cloudsql"
 }
 
 variable "project" {
@@ -43,7 +45,7 @@ variable "disk_size" {
 variable "disk_autoresize" {
   default = "true"
 }
-   
+
 variable "maintenance_day" {
   default = "7"
 }
@@ -66,15 +68,15 @@ variable "backup_start_time" {
 
 # database settings
 variable db_name {
-  default = "cloudslq-test"
+  default = "cloudslq"
 }
 variable db_charset {
   description = "The charset for the default database"
-  default = ""
+  default     = ""
 }
 variable db_collation {
   description = "The collation for the default database. Example for MySQL databases: 'utf8_general_ci'"
-  default = ""
+  default     = ""
 }
 
 
@@ -85,10 +87,10 @@ variable db_user_name {
 
 variable db_user_host {
   description = "The host for the default user"
-  default = "%"
+  default     = "%"
 }
 
 variable db_user_password {
   description = "The password for the default user"
-  default = ""
+  default     = ""
 }
